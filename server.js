@@ -32,11 +32,12 @@ app.post("/send-stk", async (req, res) => {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    api_key: API_KEY,
-                    msisdn: number,
-                    amount: amount,
-                    reference: reference
-                })
+    api_key: API_KEY,
+    msisdn: number,
+    amount: amount,
+    reference: reference,
+    email: "test@example.com" // required field
+})
             });
 
             const data = await response.json();
